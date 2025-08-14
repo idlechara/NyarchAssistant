@@ -77,7 +77,7 @@ class VitsHandler(TTSHandler):
 
         m = MultipartEncoder(fields=fields, boundary=boundary)
         headers = {"Content-Type": m.content_type}
-        url = f"{endpoint}/voice"
+        url = f"{endpoint}/voice/vits"
 
         res = requests.post(url=url, data=m, headers=headers)
         path = filename
